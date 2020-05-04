@@ -12,7 +12,7 @@ ENV         DEBIAN_FRONTEND noninteractive
 RUN         dpkg --add-architecture i386 \
             && apt-get update \
             && apt-get upgrade -y \
-            && apt-get install -y tar libssl-dev libssl1.0.0 libssl1.1 curl gcc g++ libunwind8 lib32gcc1 libgcc1 libcurl4-gnutls-dev:i386 libcurl4:i386 lib32tinfo5 libtinfo5:i386 lib32z1 libstdc++6 lib32stdc++6 libncurses5:i386 libcurl3-gnutls:i386 libreadline5 libncursesw5 lib32ncursesw5 iproute2 gdb libsdl1.2debian libfontconfig telnet net-tools netcat \
+            && apt-get install -y tar libc6 libssl-dev libssl1.0.0 libssl1.1 curl gcc g++ libunwind8 lib32gcc1 libgcc1 libcurl4-gnutls-dev:i386 libcurl4:i386 lib32tinfo5 libtinfo5:i386 lib32z1 libstdc++6 lib32stdc++6 libncurses5:i386 libcurl3-gnutls:i386 libreadline5 libncursesw5 lib32ncursesw5 iproute2 gdb libsdl1.2debian libfontconfig telnet net-tools netcat \
             && useradd -m -d /home/container container
 
 USER        container
